@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=BBH+Hegarty&display=swap');
 
 body {
     margin: 0;
@@ -6,9 +7,25 @@ body {
     background: linear-gradient(#000000, #767cbe);
 
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
 
     font-family: 'Merriweather', serif;
+}
+
+#relogio{
+    color: aliceblue;
+    margin-left: 50px;
+    text-transform: uppercase;
+
+    font-size: 1.5vw;
+    font-family: "BBH Hegarty", sans-serif;
+    text-shadow: 3px 3px 1px #767cbe;
+}
+
+.content{
+    display: flex;
+    align-items: center;
 }
 
 .pattern-divider {
@@ -24,7 +41,7 @@ body {
 
 .main-box {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     margin-right: 50px;
@@ -37,14 +54,15 @@ body {
     width: 70%;
     height: 80vh;
 
-    border: solid 2px #00040833;
+    border: double 6px #767cbe3a;
     border-radius: 1rem;
     transition: background-color 0.5s ease;
+    box-shadow: 5px 5px 1px #090909;
 }
 
 .aux-box {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
     margin-right: 25px;
@@ -57,16 +75,21 @@ body {
     width: 30%;
     height: 80vh;
 
+    border: double 6px #767cbe3a;
     border-radius: 1rem;
     transition: background-color 0.5s ease;
+    box-shadow: 5px 5px 1px #090909;
 }
 
 .profile-img {
-    border: solid 2px #767cbe3a;
     max-width: 60%;
     height: auto;
-    border-radius: 1rem;
+
+    border: solid 2px #767cbe3a;
+    border-radius: 50%;
     overflow: hidden;
+    
+    transition: scale 0.5s ease;
 }
 
 .profile-img img{
@@ -89,19 +112,23 @@ body {
     object-fit: cover;
     object-position: center;
     
+    border: solid 2px #767cbe3a;
     border-radius: 1rem;
     overflow: hidden;
+
+    transition: scale 0.5s ease;
 }
 
 /*CLASSES RELACIONADAS A TEXTO*/
 
 .text-box-quote{
-    margin: 50px;
-
     font-style: italic;
     text-align: center;
+
+    margin-left: 50px;
+    margin-right: 50px;
 }
 
-.text-box{
-    margin: 50px;
+.text-box {
+    border-top: solid 2px #767cbe3a;
 }

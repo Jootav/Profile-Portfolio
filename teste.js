@@ -1,7 +1,8 @@
 function time(){
     var date=new Date();
     var current_time=date.toLocaleTimeString();
-    document.getElementById("relogio").innerHTML=current_time;
+    var options = { weekday: 'short', day: '2-digit', month: 'short', year: 'numeric' };
+    document.getElementById("relogio").innerHTML=current_time + " &nbsp;&nbsp;|&nbsp;&nbsp;"+date.toLocaleDateString("pt-BR", options);
 }
 setInterval(time,1000);
 

@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 
 body {
     margin: 0;
@@ -23,6 +24,11 @@ body {
     font-weight: 900;
     font-variant-numeric: tabular-nums;
     text-shadow: 2px 2px 1px #767cbe;
+}
+
+.divider {
+    border-top: solid 2px #767cbe3a;
+    width: 90%;
 }
 
 .content{
@@ -58,7 +64,7 @@ body {
 
     border: double 6px #767cbe3a;
     border-radius: 1rem;
-    transition: background-color 0.5s ease;
+    transition: background-color, scale 0.5s ease;
     box-shadow: 5px 5px 1px #090909;
 }
 
@@ -79,7 +85,7 @@ body {
 
     border: double 6px #767cbe3a;
     border-radius: 1rem;
-    transition: background-color 0.5s ease;
+    transition: background-color, scale 0.5s ease;
     box-shadow: 5px 5px 1px #090909;
 }
 
@@ -132,5 +138,23 @@ body {
 }
 
 .text-box {
-    border-top: solid 2px #767cbe3a;
+    text-align: center;
+    width: 70%;
+}
+
+.icon-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 70%;
+}
+
+.icon-box a{
+    font-size: 2rem;
+    color: aliceblue;
+    position: relative;
+
+    transition: transform 0.5s ease;
 }

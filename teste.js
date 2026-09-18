@@ -14,6 +14,14 @@ function changeColorOut(x){
     x.style.backgroundColor = "#0004087c";
 }
 
+function overHoverScale(x){
+    x.style.scale = "1.02";
+}
+
+function outHoverScale(x){
+    x.style.scale = "1";
+}
+
 const ImgHoverScale=document.querySelectorAll('.profile-img, .img-carrossel img');
 
 ImgHoverScale.forEach((img) => {
@@ -23,5 +31,17 @@ ImgHoverScale.forEach((img) => {
   
   img.addEventListener("mouseout", function() {
     img.style.scale = "1";
+  });
+});
+
+const IconBox=document.querySelector('.icon-box');
+
+IconBox.querySelectorAll('a').forEach((icon) => {
+  icon.addEventListener("mouseover", function() {
+    icon.style.transform = "translateY(-10px)";
+  });
+  
+  icon.addEventListener("mouseout", function() {
+    icon.style.transform = "translateY(0)";
   });
 });

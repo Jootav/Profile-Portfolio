@@ -15,7 +15,7 @@ function changeColorOut(x){
 }
 
 function overHoverScale(x){
-    x.style.scale = "1.02";
+    x.style.scale = "1.01";
 }
 
 function outHoverScale(x){

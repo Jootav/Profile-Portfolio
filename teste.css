@@ -130,6 +130,7 @@ body {
 /*CLASSES RELACIONADAS A TEXTO*/
 
 .text-box-quote{
+    user-select: none;
     font-style: italic;
     text-align: center;
 
@@ -138,6 +139,7 @@ body {
 }
 
 .text-box {
+    user-select: none;
     text-align: center;
     width: 70%;
 }
@@ -152,9 +154,11 @@ body {
 }
 
 .icon-box a{
-    font-size: 2rem;
+    font-size: 2em;
     color: aliceblue;
     position: relative;
+
+    text-shadow: 2px 2px 1px #4b4f74;
 
     transition: transform 0.5s ease;
 }

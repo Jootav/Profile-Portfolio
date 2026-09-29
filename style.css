@@ -1,11 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+@import url(./animacoes.css);
+
+:root {
+    --primary-bg-color: #767cbe;
+    --secondary-bg-color: #000000;
+    --box-bg-color: #0004087c;
+    
+    --border-color: #767cbe3a;
+    --boxshadow-color: #090909;
+    --text-color: aliceblue;
+    --textshadow-color: #4b4f74;
+
+    --primary-color: #767cbe;
+}
 
 body {
     margin: 0;
     min-height: 100vh;
-    background: linear-gradient(#000000, #767cbe);
+    background: linear-gradient(var(--secondary-bg-color), var(--primary-bg-color));
 
     display: flex;
     flex-direction: column;
@@ -23,11 +37,13 @@ body {
     font-family: "Inter", sans-serif;
     font-weight: 900;
     font-variant-numeric: tabular-nums;
-    text-shadow: 2px 2px 1px #767cbe;
+    text-shadow: 2px 2px 1px var(--textshadow-color);
+
+    animation: 2s opacity 2s ease backwards;
 }
 
 .divider {
-    border-top: solid 2px #767cbe3a;
+    border-top: solid 2px var(--border-color);
     width: 90%;
 }
 
@@ -36,37 +52,7 @@ body {
     align-items: center;
 }
 
-.pattern-divider {
-    border: none;
-    height: 30px; 
-    background-image: url("dividerKH.png");
-    background-repeat: repeat-x;
-    background-position: center;
-    margin: 2.5rem 0;
-}
-
 /*CONTAINERS*/
-
-.main-box {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: column;
-    margin-right: 50px;
-    margin-left: 25px;
-
-    font-size: 1vw;
-    color:aliceblue;
-
-    background-color: #0004087c;
-    width: 70%;
-    height: 80vh;
-
-    border: double 6px #767cbe3a;
-    border-radius: 1rem;
-    transition: background-color, scale 0.5s ease;
-    box-shadow: 5px 5px 1px #090909;
-}
 
 .aux-box {
     display: flex;
@@ -77,23 +63,50 @@ body {
     margin-left: 50px;
 
     font-size: 1vw;
-    color:aliceblue;
+    color:var(--text-color);
+    text-shadow: 2px 2px 1px var(--textshadow-color);
 
-    background-color: #0004087c;
+    background-color: var(--box-bg-color);
     width: 30%;
     height: 80vh;
 
-    border: double 6px #767cbe3a;
+    border: double 6px var(--border-color);
     border-radius: 1rem;
-    transition: background-color, scale 0.5s ease;
-    box-shadow: 5px 5px 1px #090909;
+    transition: background-color 0.5s ease, scale 0.5s ease;
+    box-shadow: 5px 5px 1px var(--boxshadow-color);
+
+    animation: 3s ascend 1s ease backwards, 4s opacity 1s ease backwards;
+}
+
+.main-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 50px;
+    margin-left: 25px;
+
+    font-size: 1vw;
+    color: var(--text-color);
+    text-shadow: 2px 2px 1px var(--textshadow-color);
+
+    background-color: var(--box-bg-color);
+    width: 70%;
+    height: 80vh;
+
+    border: double 6px var(--border-color);
+    border-radius: 1rem;
+    transition: background-color 0.5s ease, scale 0.5s ease;
+    box-shadow: 5px 5px 1px var(--boxshadow-color);
+
+    animation: 3s ascend 1.5s ease backwards, 4s opacity 1.5s ease backwards;
 }
 
 .profile-img {
     max-width: 60%;
     height: auto;
 
-    border: solid 5px #767cbe3a;
+    border: solid 5px var(--border-color);
     border-radius: 50%;
     overflow: hidden;
     
@@ -120,7 +133,7 @@ body {
     object-fit: cover;
     object-position: center;
     
-    border: solid 5px #767cbe3a;
+    border: solid 5px var(--border-color);
     border-radius: 1rem;
     overflow: hidden;
 
@@ -155,10 +168,10 @@ body {
 
 .icon-box a{
     font-size: 2em;
-    color: aliceblue;
+    color: var(--text-color);
     position: relative;
 
-    text-shadow: 2px 2px 1px #4b4f74;
+    text-shadow: 2px 2px 1px var(--textshadow-color);
 
     transition: transform 0.5s ease;
 }

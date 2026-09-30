@@ -1,0 +1,50 @@
+.custom-player {
+    display: flex;
+    flex-direction: row;
+
+    width: 90%;
+    height: 15vh;
+
+    border: double 5px var(--border-color);
+    border-radius: 1rem;
+
+    background-color: var(--box-bg-color);
+    box-shadow: 0px 0px 20px var(--boxshadow-color);
+    transition: scale 0.5s ease;
+
+    overflow: hidden;
+}
+
+.disk {
+    width: 12vh;
+    height: 12vh;
+    border-radius: 20%;
+
+    margin: 1.5vh;
+
+    background-image: url('https://avatar-cyan.vercel.app/api/pfp/186260748756844544/image.png');
+    background-size: cover;
+}
+
+.music-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 70%;
+}
+
+.music-name, .music-artist {
+    text-align: center;
+    text-transform: capitalize;
+
+    margin: 0;
+}
+
+.music-name {
+
+}
+
+.music-artist {
+    font-size: 1.5vh;
+}

@@ -8,6 +8,7 @@
     --primary-bg-color: #767cbe;
     --secondary-bg-color: #000000;
     --box-bg-color: #0004087c;
+    --box-bghover-color: #000408c1;
     
     --border-color: #767cbe3a;
     --boxshadow-color: #090909;
@@ -15,6 +16,7 @@
     --textshadow-color: #4b4f74;
 
     --primary-color: #767cbe;
+    --secondary-color: #211933;
 }
 
 body {
@@ -27,6 +29,7 @@ body {
     justify-content: space-evenly;
 
     font-family: 'Merriweather', serif;
+    user-select: none;
 }
 
 #relogio{
@@ -75,6 +78,7 @@ body {
     border-radius: 1rem;
     transition: background-color 0.5s ease, scale 0.5s ease;
     box-shadow: 5px 5px 1px var(--boxshadow-color);
+    box-shadow: inset 0px 0px 10px var(--boxshadow-color);
 
     animation: 3s ascend 1s ease backwards, 4s opacity 1s ease backwards;
 }
@@ -99,6 +103,7 @@ body {
     border-radius: 1rem;
     transition: background-color 0.5s ease, scale 0.5s ease;
     box-shadow: 5px 5px 1px var(--boxshadow-color);
+    box-shadow: inset 0px 0px 10px var(--boxshadow-color);
 
     animation: 3s ascend 1.5s ease backwards, 4s opacity 1.5s ease backwards;
 }
@@ -130,21 +135,57 @@ body {
 }
 
 .img-carrossel img {
-    width: 15vw;
+    width: 10vw;
     object-fit: cover;
     object-position: center;
     
-    border: solid 5px var(--border-color);
+    border: outset 5px var(--border-color);
     border-radius: 1rem;
+    box-shadow: 5px 5px 10px var(--boxshadow-color);
     overflow: hidden;
 
-    transition: scale 0.5s ease;
+    transition: scale 0.5s ease, filter 0.5s ease-in-out;
+    filter: grayscale(100%);
+}
+
+.img-carrossel img:hover {
+    filter: grayscale(0%);
+}
+
+.button-box {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.button-box button {
+    width: 10vw;
+    height: 5vh;
+
+    font-family: 'Merriweather', serif;
+
+    background-color: var(--box-bg-color);
+    color: var(--text-color);
+    box-shadow: inset 0px 0px 15px var(--border-color);
+    text-shadow: 2px 2px 1px var(--textshadow-color);
+
+    border: outset 3px var(--primary-color);
+    border-radius: 1rem;
+
+    transition: background-color 0.5s ease, scale 0.5s ease;
+}
+
+.button-box button:hover {
+    background-color: var(--box-bghover-color);
+    scale: 1.1;
+    cursor: pointer;
 }
 
 /*CLASSES RELACIONADAS A TEXTO*/
 
 .text-box-quote{
-    user-select: none;
     font-style: italic;
     text-align: center;
 

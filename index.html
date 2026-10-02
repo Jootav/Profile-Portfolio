@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jota</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="icon" type="image/x-icon" href="images/crown.png">
 </head>
 <body>
     <header id="relogio">CLOCK</header>
@@ -13,7 +14,8 @@
         <div class="profile-img" data-tilt>
             <img width="auto" height="auto" src="https://avatar-cyan.vercel.app/api/pfp/186260748756844544/image.png" alt="Foto de perfil">
         </div>
-        <h2>JOTA</h2>
+        <h2>Jota</h2>
+        <div class="divider"></div>
         <div class="custom-player">
             <div class="disk"></div>
             <div class="music-information">
@@ -21,7 +23,18 @@
                 <p class="music-artist">Music Artist</p>
                 <div class="song-slider">
                     <input type="range" value="0" class="seek-bar">
+                    <span class="current-time">00:00</span>
+                    <span class="song-duration">00:00</span>
                 </div>
+                <div class="controls">
+                    <button class="btn backward-btn"><img src="images/previous-button.png" alt="" width="15px" height="15px"></button>
+                    <button class="play-btn pause">
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <button class="btn forward-btn"><img src="images/next-button.png" alt="" width="15px" height="15px"></button>
+                </div>
+                <audio src="./The Other Promise_spotdown.org.mp3" id="audio"></audio>
             </div>
         </div>
         <div class="divider"></div>
@@ -36,16 +49,17 @@
         <p class="text-box-quote">"Time never waits. It delivers all equally to the same end. You, who wish to safeguard the future, however limited it may be... You will be given one year; go forth without falter, with your heart as your guide."</p>
         <div class="divider"></div>
         <div class="button-box">
-            <button>Click Me</button>
-            <button>Click Me</button>
-            <button>Click Me</button>
-            <button>Click Me</button>
+            <button>ABOUT ME</button>
+            <button>LIKES</button>
+            <button>PORTFOLIO</button>
         </div>
+        <div class="divider"></div>
         <div class="img-carrossel">
-            <div data-tilt><a href="#"><img width="auto" height="auto" src="https://avatar-cyan.vercel.app/api/pfp/186260748756844544/image.png" alt="Foto de perfil"></a></div>
-            <div data-tilt><a href="#"><img width="auto" height="auto" src="https://avatar-cyan.vercel.app/api/pfp/186260748756844544/image.png" alt="Foto de perfil"></a></div>
-            <div data-tilt><a href="#"><img width="auto" height="auto" src="https://avatar-cyan.vercel.app/api/pfp/186260748756844544/image.png" alt="Foto de perfil"></a></div>
+            <div data-tilt><a href="#"><img width="auto" height="auto" src="./images/gallery/sora1.png" alt="Foto de perfil"></a></div>
+            <div data-tilt><a href="#"><img width="auto" height="auto" src="./images/gallery/sora2.png" alt="Foto de perfil"></a></div>
+            <div data-tilt><a href="#"><img width="auto" height="auto" src="./images/gallery/sora3.png" alt="Foto de perfil"></a></div>
         </div>
+        <div class="divider"></div>
         <div class="text-box">
             <p>Lorem ipsum dolor sit amet.</p>
         </div>
@@ -54,8 +68,9 @@
         </div>
     </div>
     </div>
-    <script src="script.js"></script>
-    <script type="text/javascript" src="vanilla-tilt.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/music-player.js"></script>
+    <script type="text/javascript" src="./scripts/vanilla-tilt.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
